@@ -1,0 +1,21 @@
+{
+  "name": "food-planner",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "tsc-files": "^1.1.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^1.9.3"
+  },
+  "trustedDependencies": ["@biomejs/biome"],
+  "scripts": {
+    "prepare": "husky"
+  }
+}

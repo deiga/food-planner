@@ -1,0 +1,144 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+  "assists": {
+    "enabled": true
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "ignore": []
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "formatWithErrors": true
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "bracketSpacing": true,
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2,
+      "jsxQuoteStyle": "double",
+      "lineWidth": 90,
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "always",
+      "trailingCommas": "all"
+    },
+    "globals": []
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "indentWidth": 2
+    },
+    "parser": {
+      "allowTrailingCommas": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "a11y": {
+        "noSvgWithoutTitle": "warn",
+        "recommended": true,
+        "useAltText": "warn",
+        "useFocusableInteractive": "warn",
+        "useKeyWithClickEvents": "warn",
+        "useKeyWithMouseEvents": "warn",
+        "useSemanticElements": "info",
+        "useValidAnchor": "info"
+      },
+      "complexity": {
+        "noBannedTypes": "error",
+        "noExcessiveCognitiveComplexity": "warn",
+        "noExcessiveNestedTestSuites": "warn",
+        "noForEach": "warn",
+        "noUselessFragments": {
+          "fix": "safe",
+          "level": "error"
+        },
+        "recommended": true,
+        "useOptionalChain": {
+          "fix": "safe",
+          "level": "error"
+        },
+        "useSimplifiedLogicExpression": "off"
+      },
+      "correctness": {
+        "noUndeclaredVariables": "error",
+        "noUnsafeOptionalChaining": "error",
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "recommended": true,
+        "useArrayLiterals": {
+          "fix": "safe",
+          "level": "error"
+        },
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "warn",
+        "useIsNan": {
+          "fix": "safe",
+          "level": "error"
+        }
+      },
+      "nursery": {
+        "noDuplicateElseIf": "error",
+        "recommended": true
+      },
+      "performance": {
+        "recommended": true
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "warn",
+        "recommended": true
+      },
+      "style": {
+        "noInferrableTypes": "error",
+        "noNegationElse": "error",
+        "noNonNullAssertion": "warn",
+        "noUnusedTemplateLiteral": {
+          "fix": "safe",
+          "level": "error"
+        },
+        "noUselessElse": "error",
+        "recommended": true,
+        "useCollapsedElseIf": "error",
+        "useDefaultParameterLast": "warn",
+        "useExponentiationOperator": "warn",
+        "useExportType": "error",
+        "useFragmentSyntax": {
+          "fix": "safe",
+          "level": "error"
+        },
+        "useImportType": "error",
+        "useLiteralEnumMembers": "warn",
+        "useTemplate": {
+          "fix": "safe",
+          "level": "error"
+        }
+      },
+      "suspicious": {
+        "noArrayIndexKey": "warn",
+        "noAssignInExpressions": "warn",
+        "noExplicitAny": "error",
+        "noImplicitAnyLet": "error",
+        "noThenProperty": "warn",
+        "recommended": true
+      }
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  }
+}
