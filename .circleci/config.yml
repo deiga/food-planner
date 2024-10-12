@@ -3,12 +3,23 @@
 # See: https://circleci.com/docs/configuration-reference
 # Stacks detected: deps:node:.
 version: 2.1
+
+commands:
+  setup-bun:
+    steps:
+      - run: |
+          curl -fsSL https://bun.sh/install | bash
+          echo 'export BUN_INSTALL="$HOME/.bun"' >> "$BASH_ENV"
+          echo 'export PATH="$BUN_INSTALL/bin:$PATH"' >> "$BASH_ENV"
+
 jobs:
   test:
     docker:
       - image: cimg/node:current
     steps:
       - checkout
+      - setup-bun
+      - run: bun install --frozen-lockfile
       - run:
           name: Run tests
           command: bun test
@@ -17,6 +28,8 @@ jobs:
       - image: cimg/node:current
     steps:
       - checkout
+      - setup-bun
+      - run: bun install --frozen-lockfile
       - run:
           name: Run lint
           command: bun run lint
@@ -25,6 +38,8 @@ jobs:
       - image: cimg/node:current
     steps:
       - checkout
+      - setup-bun
+      - run: bun install --frozen-lockfile
       - run:
           name: Run types check
           command: bun run types:check
