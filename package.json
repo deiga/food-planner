@@ -16,6 +16,9 @@
   },
   "trustedDependencies": ["@biomejs/biome"],
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "types:check": "tsc -p tsconfig.json"
   }
 }

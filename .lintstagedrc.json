@@ -1,5 +1,5 @@
 {
-  "*": ["biome check --write"],
+  "*": ["bun run lint:fix"],
   "*.ts": ["tsc-files --noEmit src/types.ts"],
   "*.{js,ts}": ["bun test --bail"]
 }

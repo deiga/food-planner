@@ -1,0 +1,36 @@
+# Couldn't automatically generate a config from your source code.
+# This is a generic template to serve as a base for your custom config
+# See: https://circleci.com/docs/configuration-reference
+# Stacks detected: deps:node:.
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: cimg/node:current
+    steps:
+      - checkout
+      - run:
+          name: Run tests
+          command: bun test
+  lint:
+    docker:
+      - image: cimg/node:current
+    steps:
+      - checkout
+      - run:
+          name: Run lint
+          command: bun run lint
+  types-check:
+    docker:
+      - image: cimg/node:current
+    steps:
+      - checkout
+      - run:
+          name: Run types check
+          command: bun run types:check
+workflows:
+  food-planner:
+    jobs:
+      - test
+      - lint
+      - types-check
