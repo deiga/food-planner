@@ -1,4 +1,4 @@
-const featureFlags = {};
+import featureFlags from './config.json' with { type: 'json' };
 
 function getFeatureFlagsFromEnv() {
   if (!process.env.FEATURE_FLAGS) {

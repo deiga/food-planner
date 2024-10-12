@@ -1,0 +1,11 @@
+[test]
+coverage = true
+
+[install]
+optional = false
+
+[install.cache]
+dir = "~/.bun/install/cache"
+
+[run]
+silent = false

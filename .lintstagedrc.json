@@ -1,5 +1,5 @@
 {
   "*": ["biome check --write"],
-  "*.ts": ["tsc-files --noEmit"],
+  "*.ts": ["tsc-files --noEmit src/types.ts"],
   "*.{js,ts}": ["bun test --bail"]
 }
