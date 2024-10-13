@@ -1,5 +1,5 @@
 [test]
-coverage = true
+coverage = false
 
 [install]
 optional = false

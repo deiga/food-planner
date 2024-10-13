@@ -25,8 +25,8 @@ export const recipes = [
   'Tofunugetit',
   'Tofunuudelit',
   'Tofupuikot ja hernetahna',
-  'Tortillas',
+  'Tortilla',
   'Uunipyttipannu',
   'Vegaaninen butter tofu',
   'Vihapullat ja Perunamuusi',
-];
+] as const;
